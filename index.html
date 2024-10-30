@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Piece</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #40E0D0; 
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff6347;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            text-align: center;
+            background-color: #333;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            margin: 20px;
+            text-align: center;
+        }
+        .characters {
+            display: none; 
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .character-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 200px;
+            text-align: center;
+            padding: 15px;
+        }
+        .character-card img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        .character-card h3 {
+            margin: 10px 0;
+        }
+        .video-section {
+            margin-top: 40px;
+        }
+        iframe {
+            width: 80%;
+            height: 400px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .historia {
+            margin: 40px 0;
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .historia h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .historia p {
+            text-align: justify;
+            line-height: 1.8;
+            font-size: 20px; 
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            .characters {
+                flex-direction: column;
+                align-items: center;
+            }
+            iframe {
+                width: 100%;
+                height: 250px;
+            }
+            .historia {
+                padding: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="inicio">
+        <h1>Bienvenido al Mundo de One Piece</h1>
+    </header>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#personajes" onclick="showCharacters()">Personajes</a>
+        <a href="#historia" onclick="showHistoria()">Historia</a>
+    </nav>
+
+    <div class="container">
+        <h2>Resumen de One Piece</h2>
+        <iframe src="img\One piece intro.mp4" allowfullscreen></iframe> 
+    </div>
+
+    
+    <div class="container">
+        <img src="img\one piece.jpeg" alt="Portada de One Piece" style="width: 80%; max-width: 600px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin: 20px auto; display: block;">
+    </div>
+
+    <div class="container" id="personajes">
+        <h2>Personajes Principales</h2>
+        <div class="characters" id="character-list">
+            <div class="character-card">
+                <img src="img\Monkey D. Luffy.jpeg" alt="Monkey D. Luffy">
+                <h3>Monkey D. Luffy</h3>
+                <p>El capitán de los Sombrero de Paja. Sueña con encontrar el One Piece y convertirse en el Rey de los Piratas.</p>
+            </div>
+            <div class="character-card">
+                <img src="img\Roronoa Zoro.jpg" alt="Roronoa Zoro">
+                <h3>Roronoa Zoro</h3>
+                <p>El espadachín del grupo, experto en las tres espadas, quiere ser el mejor espadachín del mundo.</p>
+            </div>
+            <div class="character-card">
+                <img src="img\Nami.webp" alt="Nami">
+                <h3>Nami</h3>
+                <p>La navegante de la tripulación, apasionada por los mapas y el clima.</p>
+            </div>
+            <div class="character-card">
+                <img src="img\Sanji.jpeg" alt="Sanji">
+                <h3>Sanji</h3>
+                <p>El chef del barco, sueña con encontrar el legendario All Blue, donde todos los mares se encuentran.</p>
+            </div>
+            <div class="character-card">
+                <img src="img\Usopp.jpeg" alt="Usopp">
+                <h3>Usopp</h3>
+                <p>El tirador del grupo, conocido por sus mentiras y cuentos, sueña con ser un gran guerrero del mar.</p>
+            </div>
+            <div class="character-card">
+                <img src="img\Tony Tony Chopper.png" alt="Tony Tony Chopper">
+                <h3>Tony Tony Chopper</h3>
+                <p>El médico de la tripulación, es un reno que come una Fruta del Diablo y puede transformarse en humano.</p>
+            </div>
+            <div class="character-card">
+                <img src="img\Nico Robin.jpg" alt="Nico Robin">
+                <h3>Nico Robin</h3>
+                <p>La arqueóloga del grupo, tiene la habilidad de hacer florecer partes de su cuerpo a través de la Fruta del Diablo.</p>
+            </div>
+            <div class="character-card">
+                <img src="img\Franky.jpeg" alt="Franky">
+                <h3>Franky</h3>
+                <p>El carpintero de la tripulación, es un cyborg que crea y mejora barcos.</p>
+            </div>
+            <div class="character-card">
+                <img src="img\BROOK.jpeg" alt="Brook">
+                <h3>BROOK</h3>
+                <p>El músico del grupo, es un esqueleto que volvió a la vida gracias a la Fruta del Diablo.</p>
+            </div>
+            <div class="character-card">
+                <img src="img\Jinbe.jpeg" alt="Jinbe">
+                <h3>Jinbe</h3>
+                <p>El timonel de la tripulación, es un hombre pez y experto en artes marciales del mar.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container historia" id="historia" style="display: none;">
+        <h2>Historia de One Piece</h2>
+        <p>
+            **One Piece** es una épica aventura pirata que sigue las increíbles travesías de **Monkey D. Luffy**, un joven con un sueño aparentemente imposible: encontrar el legendario tesoro **One Piece** y convertirse en el **Rey de los Piratas**. La historia comienza cuando Luffy, inspirado por su ídolo de la infancia, el pirata **Shanks el Pelirrojo**, accidentalmente come una **Fruta del Diablo**, otorgándole habilidades elásticas que le permiten estirar su cuerpo como si fuera de caucho. Aunque obtiene estos poderes, la fruta le impide nadar para siempre, una desventaja considerable para un pirata. Sin embargo, esto no disuade a Luffy, quien mantiene su firme deseo de explorar el vasto mar conocido como el **Grand Line** y superar todos los obstáculos para cumplir su sueño.
+
+            A lo largo de su viaje, Luffy va reclutando a diversos y únicos compañeros que comparten sus propios sueños y ambiciones. Su primera gran alianza es con **Roronoa Zoro**, un espadachín formidable que quiere convertirse en el mejor espadachín del mundo. Junto a él, se unen **Nami**, una talentosa navegante con un misterioso pasado, **Usopp**, un valiente aunque a veces temeroso tirador, y **Sanji**, un habilidoso chef que sueña con encontrar el mítico mar **All Blue**, donde se dice que se encuentran los peces de todos los océanos del mundo.
+
+            Conforme la tripulación de los **Sombrero de Paja** crece, también lo hacen sus desafíos. Luffy y sus amigos deben enfrentarse a poderosos piratas, crueles marines, y figuras legendarias como los **Shichibukai**, los **Yonkou** y otros usuarios de las **Frutas del Diablo**. A medida que avanzan en su viaje, descubren los misterios del **Siglo Vacío**, una era perdida en la historia que el Gobierno Mundial ha tratado de borrar de la existencia. En este contexto, emerge el enigma del "D.", un símbolo que varios personajes clave, incluido Luffy, llevan en su nombre, y que parece tener una conexión profunda con los eventos más importantes del mundo.
+
+            Tras más de mil episodios, la obra maestra de **Eiichiro Oda** ha tocado los corazones de millones de personas alrededor del mundo, ofreciendo no solo una serie de aventuras, sino también profundas reflexiones sobre la vida, el poder y la búsqueda inquebrantable de los sueños.
+        </p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 One Piece Fan Page</p>
+    </footer>
+
+    <script>
+        function showCharacters() {
+            document.getElementById('character-list').style.display = 'flex';
+            document.querySelector('.historia').style.display = 'none'; 
+        }
+
+        function showHistoria() {
+            document.getElementById('character-list').style.display = 'none'; 
+            document.querySelector('.historia').style.display = 'block'; 
+        }
+    </script>
+</body>
+</html>
